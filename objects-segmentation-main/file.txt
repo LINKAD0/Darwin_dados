@@ -1,0 +1,17 @@
+Namespace(filename='C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00', get_metrics=False)
+config['Inference']['get_metrics'] False
+Inferencia. Arquivo encontrado com sucesso
+device: cuda
+6
+Train list []
+Val list []
+Test list ['posz.png', 'negz.png', 'negy.png', 'posx.png', 'negx.png', 'posy.png']
+6
+['C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\negx.png', 'C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\negy.png', 'C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\negz.png', 'C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\posx.png', 'C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\posy.png', 'C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00/imgs\\posz.png']
+(6, 512, 512) (6, 512, 512)
+encoder_values.shape (6, 2048)
+Namespace(filename='C:\\Users\\jchamorro\\Downloads\\P67\\predictions\\0dc5f88627c582915d267e5e45a57d00', get_metrics=False, train=False, inference=True, active_learning=False, active_learning_method='uncertainty', active_learning_diversity_method=None, random_percentage=0, k=100, beta=5)
+Arquivo encontrado com sucesso
+========== Starting inference ...
+========== ... finished inference
+time 14.474524021148682

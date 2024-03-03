@@ -1,0 +1,130 @@
+{
+    "General":{
+        "device":"cuda",
+        "type":"segmentation",
+        "read":"projection",
+        "optim":"adam",
+        "lr_scratch":3e-4,
+        "loss_segmentation":"ce",
+        "momentum":0.9,
+        "epochs":40,
+        "batch_size":4,
+        "path_model":"models",
+        "path_predicted_images":"output",
+        "seed":0,
+        "model_type":"deeplab",
+        "test_batch_size": 1,
+        "exp_id": 0,
+        "fine_tune": false,
+        "fine_tune_path_model": "/petrobr/algo360/current/lvc/objects-segmentation/models/pretrained/DeepLabV3Plus_0_corrosion.p",
+        "ignore_background": true
+    },
+    "Dataset":{
+        "paths":{
+            "path_dataset":"/petrobr/algo360/current/PEDROSOTO/HILAI_360/DATA/sistemas/",
+            "path_images":"images",
+            "path_segmentations_npy":"labels",
+            "path_segmentations":"labels_png",
+
+            "path_csv":"Train_Test.csv"
+        },
+        "extensions":{
+            "ext_images":".jpg",
+            "ext_segmentations":".png"
+        },
+        "splits":{
+            "split_val":0.1
+        },
+        "transforms":{
+            "resize":512,
+            "new_train_preprocessing_flag": true,
+            "p_flip":0.5,
+            "p_crop":0.3,
+            "p_rot":0.2
+        },
+        "num_classes": 10,
+        "classes":{
+            "0": {
+                "name": "Background",
+                "color": [0,0,0],
+                "color_rgb": [0,0,0]
+            },
+            "1": {
+                "name": "Equipamento",
+                "color": [1,1,1],
+                "color_rgb": [123, 213, 207]
+            },
+            "2": {
+                "name": "Escadas",
+                "color": [2,2,2],
+                "color_rgb": [229, 114, 238]
+            },
+            "3": {
+                "name": "Estrutura",
+                "color": [3,3,3],
+                "color_rgb": [198, 21, 21]
+            },
+            "4": {
+                "name": "Flanges",
+                "color": [4,4,4],
+                "color_rgb": [218, 71, 209]
+            },
+            "5": {
+                "name": "Guarda Corpo",
+                "color": [5,5,5],
+                "color_rgb": [232, 234, 87]
+            },
+            "6": {
+                "name": "Piso",
+                "color": [6,6,6],
+                "color_rgb": [19, 27, 129]
+            },
+            "7": {
+                "name": "Suportes",
+                "color": [7,7,7],
+                "color_rgb": [233, 117, 2]
+            },
+            "8": {
+                "name": "Teto",
+                "color": [8,8,8],
+                "color_rgb": [208, 77, 9]
+            },
+            "9": {
+                "name": "Tubulacao",
+                "color": [9,9,9],
+                "color_rgb": [68, 231, 134]
+            },
+            "10": {
+                "name": "Sem Categoria",
+                "color": [10,10,10],
+                "color_rgb": [255, 255, 255]
+            }
+
+        }
+    },
+    "Inference": {
+        "get_metrics": true,
+        "save_images": true,
+        "resize_flag": true,
+        "get_uncertainty": false
+    },
+    "ActiveLearning": {
+        "dataset": "CorrosaoActiveLearningReduced",
+        "full_train": false,
+        "method": false,
+        "diversity_method": "cluster",
+        "pca": true,
+        "spatial_buffer": false,
+        "k": 100,
+        "beta": 5,
+        "random_percentage": 0
+    },
+    "wandb":{
+        "enable":false,
+        "username":"younesbelkada",
+        "images_to_show":3,
+        "im_h":540,
+        "im_w":980
+    }
+
+}
