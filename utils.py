@@ -705,3 +705,29 @@ def draw_prediction_on_face(image, result, mask_only=False):
             annotations_only = np.array(annotated_face) 
         annotations_only[..., :3] = annotations_only[..., 2::-1]
         return annotations_only
+
+def try_find_file(file_path:str, default_directory:str):
+    """
+    returns int(0) when file is not found on neither
+    returns int(1) when file is found on the file_path argument
+    returns the file path when file is found on the path 
+            obtained by concatening both arguments
+    returns False when arguments are invalid
+    """
+
+    if type(default_directory) != str:
+        raise ValueError(f"arg default_directory:{default_directory} not string!")
+        return False
+
+    if type(file_path) != str:
+        raise ValueError(f"arg file_path:{file_path} not string!")
+        return 0
+
+    if os.path.isfile(file_path):
+        return 1
+
+    new_path = os.path.join(default_directory,file_path)
+    if os.path.isfile(new_path):
+        return new_path
+        
+    return False
