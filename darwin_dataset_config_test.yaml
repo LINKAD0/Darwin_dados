@@ -16,21 +16,21 @@ task: segment
 
 # Classes
 names:
-  0: Piso
-  1: Suportes
-  2: TVF
-  3: Teto
-  4: Guarda Corpo
-  5: Estruturas
-  6: Escadas
-  7: Equipamento
+  0: Equipamentos
+  1: Escada
+  2: Estruturas
+  3: Guarda Corpo
+  4: Piso
+  5: Suportes
+  6: TVF
+  7: Teto
 
-  8: Piso_hole
-  9: Suportes_hole
-  10: TVF_hole
-  11: Teto_hole
-  12: Guarda Corpo_hole
-  13: Estruturas_hole
-  14: Escadas_hole
-  15: Equipamento_hole
+  8: Equipamentos_hole
+  9: Escada_hole
+  10: Estruturas_hole
+  11: Guarda Corpo_hole
+  12: Piso_hole
+  13: Suportes_hole
+  14: TVF_hole
+  15: Teto_hole
 
