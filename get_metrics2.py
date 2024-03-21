@@ -67,7 +67,7 @@ def load_filenames_from_csv(df, args):
     for index, row in tqdm.tqdm(df.iterrows()):
         reference_img_name = row['Images'].split("/")[-1]
         reference_img_name = reference_img_name.split("_")
-        reference_img_name.insert(-1, "id")
+        reference_img_name.insert(3, "id")
         reference_img_name = "_".join(reference_img_name)
         # print("reference_img_name", reference_img_name)
         reference_path = os.path.join(args['path_reference'], reference_img_name)
@@ -80,7 +80,6 @@ def load_filenames_from_csv(df, args):
         else:
             image_name = os.path.basename(row['Images']).replace(".png", "_id.png")
         segmentation_path = os.path.join(args['path_segmentations'], image_name)
-
         reference = cv2.imread(reference_path,0).astype(np.uint8)
         segmentation = cv2.imread(segmentation_path,0).astype(np.uint8)
 
